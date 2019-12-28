@@ -22,7 +22,7 @@ class CreateStudentProfilesTable extends Migration
             $table->integer('class_id');
 //            $table->string('current_class');
             $table->string('guardian_phone')->nullable();
-            $table->string('guardian_email')->nullable();
+            $table->string('guardian_email')->unique();
             $table->text('home_address')->nullable();
             $table->timestamps();
         });

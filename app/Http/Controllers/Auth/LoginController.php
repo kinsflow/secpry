@@ -34,23 +34,21 @@ class LoginController extends Controller
         // Check user role
         switch ($role) {
             case 1:
-                return 'account/student';
+                return 'account/teacher';
                 break;
             case 2:
-                return 'account/home';
+                return 'account/bursary';
                 break;
             case 3:
-                return 'account/bursary';
+                return 'account/student';
                 break;
             case 4:
                 return 'account/principal';
                 break;
             case 5:
-                return 'account/teacher';
-                break;
-            case 6:
                 return 'account/director';
                 break;
+
             default:
                 return '/login';
                 break;

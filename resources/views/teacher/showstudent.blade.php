@@ -4,23 +4,23 @@
 
 
     <div class="container">
-        <h2>Basic Table</h2>
-        <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>
+        <h2>Student's List</h2><br>
         <table class="table">
             <thead>
             <tr>
                 <th>Firstname</th>
-                <th>Lastname</th>
+                <th colspan="2">Lastname</th>
 
             </tr>
             </thead>
             <tbody>
+            @foreach($all_student as $student)
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>{{$student->first_name}}</td>
+                <td>{{$student->last_name}}</td>
+                <td><button class="btn-success">view profile</button></td>
             </tr>
-
+            @endforeach
             </tbody>
         </table>
     </div>

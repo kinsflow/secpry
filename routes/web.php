@@ -23,14 +23,14 @@ Route::get('/', function () {
 
 
 Route::prefix('account')->name('login.')->group(function (){
-    Route::get('/', 'LoginController@showLogin')->name('show');
+    Route::get('/', 'CustomLoginController@showLogin')->name('show');
     Route::middleware(['checkAuth'])->group(function () {
-        Route::get('student', 'LoginController@student')->name('student');
-        Route::get('teacher', 'LoginController@teacher')->name('teacher');
-        Route::get('bursary', 'LoginController@bursary')->name('bursary');
-        Route::get('principal', 'LoginController@principal')->name('principal');
-        Route::get('director', 'LoginController@director')->name('director');
-        Route::post('auth', 'LoginController@authenticate')->name('authenticate');
+        Route::get('student', 'CustomLoginController@student')->name('student');
+        Route::get('teacher', 'CustomLoginController@teacher')->name('teacher');
+        Route::get('bursary', 'CustomLoginController@bursary')->name('bursary');
+        Route::get('principal', 'CustomLoginController@principal')->name('principal');
+        Route::get('director', 'CustomLoginController@director')->name('director');
+        Route::post('auth', 'CustomLoginController@authenticate')->name('authenticate');
 
     });
 });
@@ -38,7 +38,7 @@ Route::prefix('account')->name('login.')->group(function (){
 
 
 Route::prefix('teacher')->name('teacher.')->group(function(){
-    Route::middleware(['checkIfTeacher', 'checkAuth'])->group(function (){
+    Route::middleware(['checkAuth', 'checkIfTeacher'])->group(function (){
         Route::get('/show', 'TeacherController@show')->name('show');
         Route::get('/addstudent', 'TeacherController@add')->name('add');
         Route::post('/create', 'TeacherController@create')->name('create');

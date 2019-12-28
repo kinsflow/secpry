@@ -38,8 +38,13 @@ class User extends Authenticatable
     ];
 
 
-
-    public function roles(){
+    public function roles()
+    {
         return $this->belongsToMany(Role::class);
+    }
+
+    public function teacher()
+    {
+        return $this->hasOne(TeacherProfile::class, 'user_id');
     }
 }

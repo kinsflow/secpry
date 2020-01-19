@@ -96,5 +96,11 @@
     <orderEntry type="module" module-name="thesis" />
     <orderEntry type="module" module-name="test" />
     <orderEntry type="module" module-name="blogoop" />
+    <orderEntry type="module" module-name="kinsflow" />
+    <orderEntry type="module" module-name="agric" />
+    <orderEntry type="module" module-name="projectx" />
+    <orderEntry type="module" module-name="aanusms" />
+    <orderEntry type="module" module-name="interview" />
+    <orderEntry type="module" module-name="interv" />
   </component>
 </module>

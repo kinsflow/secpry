@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../aanusms/.idea/aanusms.iml" filepath="$PROJECT_DIR$/../aanusms/.idea/aanusms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../agric/.idea/agric.iml" filepath="$PROJECT_DIR$/../agric/.idea/agric.iml" />
       <module fileurl="file://$PROJECT_DIR$/../blogoop/.idea/blogoop.iml" filepath="$PROJECT_DIR$/../blogoop/.idea/blogoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../interv/.idea/interv.iml" filepath="$PROJECT_DIR$/../interv/.idea/interv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../interview/.idea/interview.iml" filepath="$PROJECT_DIR$/../interview/.idea/interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../kinsflow/.idea/kinsflow.iml" filepath="$PROJECT_DIR$/../kinsflow/.idea/kinsflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../projectx/.idea/projectx.iml" filepath="$PROJECT_DIR$/../projectx/.idea/projectx.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/secpry.iml" filepath="$PROJECT_DIR$/.idea/secpry.iml" />
       <module fileurl="file://$PROJECT_DIR$/../test/.idea/test.iml" filepath="$PROJECT_DIR$/../test/.idea/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/../thesis/.idea/thesis.iml" filepath="$PROJECT_DIR$/../thesis/.idea/thesis.iml" />

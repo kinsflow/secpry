@@ -16,9 +16,9 @@
             <tbody>
             @foreach($all_student as $student)
             <tr>
-                <td>{{$student->first_name}}</td>
-                <td>{{$student->last_name}}</td>
-                <td><button class="btn-success">view profile</button></td>
+                <td class="font-weight-bold">{{$student->first_name}}</td>
+                <td class="font-weight-bold">{{$student->last_name}}</td>
+                <td><a href="{{route('teacher.view_student_profile', $student->id)}}"><button class=" btn btn-success">view profile</button></a></td>
             </tr>
             @endforeach
             </tbody>

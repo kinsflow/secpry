@@ -21,8 +21,7 @@ Route::get('/', function () {
 //});
 
 
-
-Route::prefix('account')->name('login.')->group(function (){
+Route::prefix('account')->name('login.')->group(function () {
     Route::get('/', 'CustomLoginController@showLogin')->name('show');
     Route::middleware(['checkAuth'])->group(function () {
         Route::get('student', 'CustomLoginController@student')->name('student');
@@ -36,15 +35,15 @@ Route::prefix('account')->name('login.')->group(function (){
 });
 
 
-
-Route::prefix('teacher')->name('teacher.')->group(function(){
-    Route::middleware(['checkAuth', 'checkIfTeacher'])->group(function (){
+Route::prefix('teacher')->name('teacher.')->group(function () {
+    Route::middleware(['checkAuth', 'checkIfTeacher'])->group(function () {
         Route::get('/show', 'TeacherController@show')->name('show');
         Route::get('/addstudent', 'TeacherController@add')->name('add');
+        Route::get('/view_student_profile/{id}', 'TeacherController@view_student_profile')->name('view_student_profile');
+        Route::post('/update_student_profile/{id}', 'TeacherController@update_student_profile')->name('update_student_profile');
         Route::post('/create', 'TeacherController@create')->name('create');
     });
 });
-
 
 
 Auth::routes();
